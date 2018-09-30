@@ -3,4 +3,4 @@ mymodule: mymodule.f90
 test: mymodule
 	python3 test.py
 clean:
-	rm -rf dist build *.so *dSYM *egg-info
+	rm -rf dist build *.so *dSYM *egg-info __pycache__
