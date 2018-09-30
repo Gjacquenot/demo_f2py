@@ -22,7 +22,8 @@ install:
 - cmd: python setup.py build_ext --inplace --compiler=mingw32
 - cmd: python -m pip install --user --upgrade setuptools wheel
 - cmd: python setup.py bdist_wheel
-- cmd: dir dist
+- cmd: cd dist && python -m pip install --user  --no-index --find-links file://%CD% mymodule && cd ..
+
 
 test_script: pytest -rsv
 
