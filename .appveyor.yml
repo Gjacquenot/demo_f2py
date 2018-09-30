@@ -25,5 +25,5 @@ install:
 - cmd: cd dist && python -m pip install --upgrade --no-index --find-links file://%CD% mymodule && cd ..
 
 
-test_script:
-- python -m nose
+#test_script:
+#- python -m nose
