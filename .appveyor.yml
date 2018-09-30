@@ -20,6 +20,7 @@ install:
 - pip install -e .[tests]
 - cmd: del *.pyd
 - cmd: python setup.py build_ext --inplace --compiler=mingw32
+- cmd: python -m pip install --user --upgrade setuptools wheel
 - cmd: python setup.py bdist_wheel --compiler=mingw32
 
 test_script: pytest -rsv
